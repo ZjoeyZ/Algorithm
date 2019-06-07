@@ -31,7 +31,7 @@ def partition(list, low, high):
 
 
 def quik(list, low, high):
-    while low < high:
+    if low < high:
         list, pivot = partition(list, low, high)
         list = quik(list, low, pivot - 1)
         list = quik(list, pivot + 1, high)
